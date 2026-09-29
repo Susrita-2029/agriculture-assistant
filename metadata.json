@@ -1,0 +1,6 @@
+{
+  "name": "AgriSetu AI",
+  "description": "AI-powered agricultural intelligence platform for India's farmers, providing multilingual crop advisories, vision health analysis, and soil guidance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

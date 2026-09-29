@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+:root {
+  --farm-cream: #FFF9EC;
+  --farm-green-dark: #2E7D32;
+  --farm-green-light: #66BB6A;
+  --farm-orange: #F9A825;
+  --farm-tomato: #E64A19;
+  --farm-sky: #E3F2FD;
+  --farm-soil: #6D4C41;
+  font-family: 'Nunito', 'Poppins', 'Noto Sans Devanagari', 'Noto Sans Gujarati', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--farm-cream);
+  color: #1F2937;
+}
+
+/* Subtle farming pattern background with ~10% opacity */
+.farming-bg-pattern {
+  background-color: var(--farm-cream);
+  background-image: radial-gradient(#2E7D32 0.75px, transparent 0.75px), radial-gradient(#F9A825 0.75px, var(--farm-cream) 0.75px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Kisan Bhai Keyframes */
+@keyframes kisanBob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes kisanWave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  20%, 60% {
+    transform: rotate(14deg);
+  }
+  40%, 80% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes kisanBlink {
+  0%, 95%, 100% {
+    transform: scaleY(1);
+  }
+  97.5% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes cloudDriftSlow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(18px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes plantGrowPulse {
+  0% {
+    transform: scale(0.9) translateY(4px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1) translateY(-3px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9) translateY(4px);
+    opacity: 0.8;
+  }
+}
+
+.kisan-idle-bob {
+  animation: kisanBob 3.5s ease-in-out infinite;
+}
+
+.kisan-waving-arm {
+  transform-origin: 146px 142px;
+  animation: kisanWave 2.8s ease-in-out infinite;
+}
+
+.kisan-eyes {
+  transform-origin: 100px 82px;
+  animation: kisanBlink 4.2s infinite;
+}
+
+.cloud-drifting {
+  animation: cloudDriftSlow 12s ease-in-out infinite;
+}
+
+.plant-growing-anim {
+  animation: plantGrowPulse 1.8s ease-in-out infinite;
+}
+
+/* Farm buttons tactile and big */
+.btn-farm-primary {
+  min-height: 56px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #2E7D32 0%, #43A047 100%);
+  color: #FFFFFF;
+  font-weight: 800;
+  box-shadow: 0 4px 14px 0 rgba(46, 125, 50, 0.35);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-farm-primary:hover {
+  background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);
+  box-shadow: 0 6px 20px 0 rgba(46, 125, 50, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-farm-primary:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px 0 rgba(46, 125, 50, 0.3);
+}
+
+/* Card styling with subtle crop border */
+.farm-card {
+  background-color: #FFFFFF;
+  border-radius: 1.5rem;
+  border: 1.5px solid rgba(102, 187, 106, 0.35);
+  box-shadow: 0 10px 25px -5px rgba(46, 125, 50, 0.06), 0 8px 10px -6px rgba(46, 125, 50, 0.04);
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .kisan-idle-bob,
+  .kisan-waving-arm,
+  .kisan-eyes,
+  .cloud-drifting,
+  .plant-growing-anim {
+    animation: none !important;
+  }
+}

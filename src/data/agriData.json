@@ -1,0 +1,134 @@
+{
+  "states": {
+    "Gujarat": {
+      "districts": ["Rajkot", "Junagadh"],
+      "crops": ["Groundnut", "Cotton", "Wheat"],
+      "soilTypes": ["Sandy Loam", "Medium Black", "Alluvial"],
+      "growthStages": ["Sowing/Germination", "Vegetative", "Flowering/Pegging", "Pod Formation", "Maturity"],
+      "weatherPresets": {
+        "Rajkot": {
+          "temperature": 32,
+          "humidity": 68,
+          "rainfall": 2.5,
+          "wind_speed": 14,
+          "condition": "Partly Cloudy",
+          "rain_probability": 35
+        },
+        "Junagadh": {
+          "temperature": 31,
+          "humidity": 74,
+          "rainfall": 5.0,
+          "wind_speed": 16,
+          "condition": "Scattered Clouds",
+          "rain_probability": 45
+        }
+      },
+      "satellitePresets": {
+        "Rajkot": {
+          "ndvi": 0.68,
+          "vegetation_health": "Normal",
+          "crop_stress": "Low",
+          "last_pass": "2026-09-28 (Sentinel-2 MSI)"
+        },
+        "Junagadh": {
+          "ndvi": 0.73,
+          "vegetation_health": "Optimal",
+          "crop_stress": "Low",
+          "last_pass": "2026-09-27 (Sentinel-2 MSI)"
+        }
+      },
+      "networkStats": {
+        "advisoryRequests": 14200,
+        "diseaseAnalyses": 3140,
+        "weatherAlertsActive": 2
+      }
+    },
+    "Punjab": {
+      "districts": ["Ludhiana"],
+      "crops": ["Wheat", "Maize", "Cotton"],
+      "soilTypes": ["Alluvial Loam", "Clay Loam", "Sandy"],
+      "growthStages": ["Crown Root Initiation", "Tillering", "Jointing", "Heading/Flowering", "Dough Stage"],
+      "weatherPresets": {
+        "Ludhiana": {
+          "temperature": 26,
+          "humidity": 55,
+          "rainfall": 0.0,
+          "wind_speed": 9,
+          "condition": "Clear Sun",
+          "rain_probability": 10
+        }
+      },
+      "satellitePresets": {
+        "Ludhiana": {
+          "ndvi": 0.81,
+          "vegetation_health": "Optimal",
+          "crop_stress": "Low",
+          "last_pass": "2026-09-29 (Sentinel-2 MSI)"
+        }
+      },
+      "networkStats": {
+        "advisoryRequests": 18950,
+        "diseaseAnalyses": 4210,
+        "weatherAlertsActive": 1
+      }
+    },
+    "Maharashtra": {
+      "districts": ["Nashik"],
+      "crops": ["Onion", "Maize", "Groundnut"],
+      "soilTypes": ["Deep Black Clay", "Red Sandy Loam", "Medium Black"],
+      "growthStages": ["Nursery", "Vegetative Growth", "Bulb Initiation", "Bulb Development", "Harvest"],
+      "weatherPresets": {
+        "Nashik": {
+          "temperature": 28,
+          "humidity": 82,
+          "rainfall": 12.0,
+          "wind_speed": 18,
+          "condition": "Overcast with Showers",
+          "rain_probability": 70
+        }
+      },
+      "satellitePresets": {
+        "Nashik": {
+          "ndvi": 0.59,
+          "vegetation_health": "Moderate Stress",
+          "crop_stress": "Moderate",
+          "last_pass": "2026-09-27 (Sentinel-2 MSI)"
+        }
+      },
+      "networkStats": {
+        "advisoryRequests": 22300,
+        "diseaseAnalyses": 6780,
+        "weatherAlertsActive": 4
+      }
+    },
+    "Karnataka": {
+      "districts": ["Dharwad"],
+      "crops": ["Maize", "Cotton", "Groundnut"],
+      "soilTypes": ["Black Cotton", "Red Sandy", "Laterite"],
+      "growthStages": ["Emergence", "Knee High (V6)", "Tasseling/Silking", "Grain Filling", "Maturity"],
+      "weatherPresets": {
+        "Dharwad": {
+          "temperature": 29,
+          "humidity": 64,
+          "rainfall": 1.0,
+          "wind_speed": 11,
+          "condition": "Sunny Intervals",
+          "rain_probability": 25
+        }
+      },
+      "satellitePresets": {
+        "Dharwad": {
+          "ndvi": 0.71,
+          "vegetation_health": "Normal",
+          "crop_stress": "Low",
+          "last_pass": "2026-09-28 (Sentinel-2 MSI)"
+        }
+      },
+      "networkStats": {
+        "advisoryRequests": 11450,
+        "diseaseAnalyses": 2890,
+        "weatherAlertsActive": 1
+      }
+    }
+  }
+}
